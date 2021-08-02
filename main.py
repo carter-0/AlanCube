@@ -12,8 +12,6 @@ def root():
     scramble = ["R","R'","L","L'","U","U'","B","B'","D","D'","F","F'"]
     scramble = random_string_generator(20, scramble)
 
-    
-
     return render_template("index.html", scramble=scramble)
 
 if __name__ == "__main__":
