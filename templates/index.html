@@ -38,7 +38,7 @@
     <body>
         <h1 style="text-align: center;"><strong>{{ scramble }}</strong></h1>
         <div id="stopwatch">
-            00:00:00:00
+            00:00:00
         </div>
 
         <ul id="buttons">
@@ -52,7 +52,6 @@
             var hr = 0;
             var min = 0;
             var sec = 0;
-            var m_sec = 0;
             var stoptime = true;
 
             function startTimer() {
@@ -62,9 +61,9 @@
                 }
             }
             function stopTimer() {
-                if (stoptime == false) {
-                    stoptime = true;
-                }
+            if (stoptime == false) {
+                stoptime = true;
+            }
             }
 
             function timerCycle() {
@@ -72,14 +71,9 @@
                 sec = parseInt(sec);
                 min = parseInt(min);
                 hr = parseInt(hr);
-                m_sec = parseInt(m_sec)
 
                 sec = sec + 1;
 
-                if (m_sec == 100) {
-                    sec = sec + 1;
-                    m_sec = 0;
-                }
                 if (sec == 60) {
                 min = min + 1;
                 sec = 0;
@@ -100,9 +94,9 @@
                 hr = '0' + hr;
                 }
 
-                timer.innerHTML = hr + ':' + min + ':' + sec + : + m_sec;
+                timer.innerHTML = hr + ':' + min + ':' + sec;
 
-                setTimeout("timerCycle()", 1);
+                setTimeout("timerCycle()", 1000);
             }
             }
 
