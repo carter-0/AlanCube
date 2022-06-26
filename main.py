@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template, session, send_from_directory, jsonify, url_for
+from flask import Flask, render_template
 import random
 
 app = Flask(__name__, static_url_path='')
